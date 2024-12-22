@@ -98,8 +98,9 @@ O objetivo maior com esse projeto era ganhar experiência e propor um desafio a 
 As seguintes ferramentas foram usadas na construção do projeto:
 
 #### **Front-End**  
-- `HTML`
-- `CSS`
+- `HTML5`
+- `CSS3`
+- `JavaScript`
 
 
 ---
