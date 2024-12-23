@@ -4,6 +4,7 @@
     --Light-pink: hsl(275, 100%, 97%);
     --Grayish-purple: hsl(292, 16%, 49%);
     --Dark-purple: hsl(292, 42%, 14%);
+    --Light-purple:hsl(281, 58%, 47%);
 }
 
 *{
@@ -11,6 +12,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Work Sans", serif;
+    cursor: default;
 }
 
 html{
@@ -40,45 +42,66 @@ hr{
 }
 
 .container{
-    width: 55rem;
+    max-width: 55rem;
     background-color: var(--White);
     position: absolute;
     padding: 3rem;
     border-radius: 1rem;
     top: 25%;
-    right: 30%;
-    margin-bottom: 3rem;
+    left: 30%;
     box-shadow: rgba(100, 100, 111, 0.2) 0 0.7rem 2.9rem 0;
 }
 
 .container .title{
-    text-align: center;
     display: flex;
 }
 
 .container h1{
     font-size: 5rem;
-    padding: 2rem;
+    padding-left: 2rem;
+    margin-bottom: 3rem;
 }
 
-.sub-p{
-    color: var(--Grayish-purple);
-    margin: 2.5rem 0;
-}
-
-.content button{
-    background-image: url(../images/icon-plus.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer;
-    width: 2rem;
-    height: 2rem;
-    border: none;
-    border-radius: 50%;
-}
-
-.content p{
+.label-checkbox{
+    font-size: 1.6rem;
+    font-weight: 500;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
 }
 
+.label-checkbox:hover{
+    color: var(--Light-purple);
+}
+
+.label-checkbox .checkbox{
+    appearance: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url(../images/icon-plus.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    transition: all 250ms ease;
+}
+
+.label-checkbox .checkbox:checked{
+    transform: rotate(-180deg);
+    background-image: url(../images/icon-minus.svg);
+}
+
+.text-color{
+    color: transparent;
+    height: 0;
+    transition: all 250ms ease-in-out;
+}
+
+.text-open{
+    height: 8rem;
+    color: var(--Grayish-purple);
+    display: block;
+    transition: all 250ms ease-in-out;
+    margin: 2rem 0;
+}
