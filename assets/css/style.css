@@ -36,13 +36,13 @@ hr{
 }
 
 .background-top{
-    background-image: url(/assets/images/background-pattern-desktop.svg);
+    background-image: url(../images/background-pattern-desktop.svg);
     width: 100%;
     height: 30rem;
 }
 
 .container{
-    max-width: 55rem;
+    width: 55rem;
     background-color: var(--White);
     position: absolute;
     padding: 3rem;
@@ -54,28 +54,31 @@ hr{
 
 .container .title{
     display: flex;
+    margin-bottom: 3rem;
 }
 
 .container h1{
     font-size: 5rem;
     padding-left: 2rem;
-    margin-bottom: 3rem;
 }
 
-.label-checkbox{
-    font-size: 1.6rem;
-    font-weight: 500;
+.bloc-input{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.bloc-input label{
+    font-size: 1.6rem;
+    font-weight: 500;
     cursor: pointer;
 }
 
-.label-checkbox:hover{
+.bloc-input label:hover{
     color: var(--Light-purple);
 }
 
-.label-checkbox .checkbox{
+.bloc-input .checkbox{
     appearance: none;
     width: 2.5rem;
     height: 2.5rem;
@@ -84,24 +87,20 @@ hr{
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
-    transition: all 250ms ease;
+    transition: all 250ms ease-in-out;
 }
 
-.label-checkbox .checkbox:checked{
+.bloc-input .checkbox:checked{
     transform: rotate(-180deg);
     background-image: url(../images/icon-minus.svg);
 }
 
 .text-color{
-    color: transparent;
-    height: 0;
-    transition: all 250ms ease-in-out;
+    color: var(--Grayish-purple);
+    margin-top: 2rem;
+    display: none;
 }
 
-.text-open{
-    height: 8rem;
-    color: var(--Grayish-purple);
+.checkbox:checked + .text-color{
     display: block;
-    transition: all 250ms ease-in-out;
-    margin: 2rem 0;
 }
