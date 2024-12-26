@@ -30,6 +30,10 @@ p{
     font-weight: 500;
 }
 
+a{
+    text-decoration: none;
+}
+
 hr{
     margin: 1.5rem 0;
     border: solid 0.09rem var(--Light-pink);
@@ -48,7 +52,8 @@ hr{
     padding: 3rem;
     border-radius: 1rem;
     top: 25%;
-    left: 30%;
+    left: 50%;
+    transform: translate(-50%);
     box-shadow: rgba(100, 100, 111, 0.2) 0 0.7rem 2.9rem 0;
 }
 
@@ -103,4 +108,69 @@ hr{
 
 .checkbox:checked + .text-color{
     display: block;
+}
+
+.style-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.style-content .label-checkbox{
+    margin: 1.5rem 0;
+    font-size: 1.6rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.style-content .label-checkbox:hover{
+    color: var(--Light-purple);
+}
+
+.style-content .checkbox{
+    appearance: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url(../images/icon-plus.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 250ms ease-in-out;
+}
+
+.style-content .checkbox:checked{
+    transform: rotate(-180deg);
+    background-image: url(../images/icon-minus.svg);
+}
+
+.style-content .text-checkbox{
+    color: var(--Grayish-purple);
+    height: 0;
+    overflow: hidden;
+    transition: all 250ms ease-in-out;
+}
+
+.style-content .checkbox:checked + .text-checkbox{
+    height: 8rem;
+}
+
+.attribution{
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.attribution p{
+    font-size: 1rem;
+    color: var(--Dark-purple);
+}
+
+.attribution p a{
+    color: var(--Dark-purple);
+    cursor: pointer;
+}
+
+.attribution p a:hover{
+    color: var(--Light-purple);
 }
