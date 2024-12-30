@@ -23,6 +23,9 @@ body{
     min-height: 100dvh;
     background-color: var(--Light-pink);
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 p{
@@ -35,32 +38,28 @@ a{
 }
 
 hr{
-    margin: 1.5rem 0;
-    border: solid 0.09rem var(--Light-pink);
+    border: solid 0.1rem var(--Light-pink);
 }
 
 .background-top{
     background-image: url(../images/background-pattern-desktop.svg);
     min-width: 100vw;
     height: 30rem;
-}
-
-.space-body{
-    min-width: 100vw;
-    height: 35rem;
+    position: absolute;
+    top: 0;
+    z-index: -100;
 }
 
 .container{
+    z-index: 100;
     width: 55rem;
     background-color: var(--White);
-    position: absolute;
     padding: 3rem;
     border-radius: 1rem;
-    top: 25rem;
-    left: 50%;
-    transform: translate(-50%);
     box-shadow: rgba(100, 100, 111, 0.2) 0 0.7rem 2.9rem 0;
-    margin-bottom: 3rem;
+    margin: 0 auto;
+    margin-bottom: 8rem;
+    margin-top: 8rem;
 }
 
 .container .title{
@@ -134,10 +133,8 @@ hr{
 
 .attribution{
     min-width: 25rem;
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translate(-50%);
+    margin: 0 auto;
+    margin-bottom: 2rem;
 }
 
 .attribution p{
@@ -146,7 +143,7 @@ hr{
 }
 
 .attribution p a{
-    color: var(--Dark-purple);
+    color: var(--Grayish-purple);
     cursor: pointer;
 }
 
