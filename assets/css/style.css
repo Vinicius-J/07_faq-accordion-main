@@ -41,8 +41,13 @@ hr{
 
 .background-top{
     background-image: url(../images/background-pattern-desktop.svg);
-    width: 100%;
+    min-width: 100vw;
     height: 30rem;
+}
+
+.space-body{
+    min-width: 100vw;
+    height: 35rem;
 }
 
 .container{
@@ -51,53 +56,22 @@ hr{
     position: absolute;
     padding: 3rem;
     border-radius: 1rem;
-    top: 25%;
+    top: 25rem;
     left: 50%;
     transform: translate(-50%);
     box-shadow: rgba(100, 100, 111, 0.2) 0 0.7rem 2.9rem 0;
+    margin-bottom: 3rem;
 }
 
 .container .title{
     display: flex;
     margin-bottom: 3rem;
-}
-
-.container h1{
-    font-size: 5rem;
-    padding-left: 2rem;
-}
-
-.bloc-input{
-    display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
-.bloc-input label{
-    font-size: 1.6rem;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-.bloc-input label:hover{
-    color: var(--Light-purple);
-}
-
-.bloc-input .checkbox{
-    appearance: none;
-    width: 2.5rem;
-    height: 2.5rem;
-    background-image: url(../images/icon-plus.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    cursor: pointer;
-    transition: all 250ms ease-in-out;
-}
-
-.bloc-input .checkbox:checked{
-    transform: rotate(-180deg);
-    background-image: url(../images/icon-minus.svg);
+.container .title h1{
+    font-size: 5rem;
+    padding-left: 2rem;
 }
 
 .text-color{
@@ -114,6 +88,7 @@ hr{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
 }
 
 .style-content .label-checkbox{
@@ -135,6 +110,7 @@ hr{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    cursor: pointer;
     transition: all 250ms ease-in-out;
 }
 
@@ -146,17 +122,20 @@ hr{
 .style-content .text-checkbox{
     color: var(--Grayish-purple);
     height: 0;
+    margin-bottom: 0;
     overflow: hidden;
     transition: all 250ms ease-in-out;
 }
 
 .style-content .checkbox:checked + .text-checkbox{
     height: 8rem;
+    margin-bottom: 1rem;
 }
 
 .attribution{
+    min-width: 25rem;
     position: absolute;
-    bottom: 2rem;
+    bottom: 5%;
     left: 50%;
     transform: translate(-50%);
 }
@@ -173,4 +152,37 @@ hr{
 
 .attribution p a:hover{
     color: var(--Light-purple);
+}
+
+@media (max-width:600px) {
+    .background-top{
+        background-image: url(../images/background-pattern-mobile.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 20rem;
+    }
+    .container{
+        width: 70%;
+        padding: 2rem;
+        top: 18%;
+    }
+    .container h1{
+        font-size: 3rem;
+    }
+    .container .title{
+        margin-bottom: 1rem;
+    }
+    .container .title img{
+        width: 2.5rem;
+    }
+    .style-content .label-checkbox{
+        flex-basis: 80%;
+    }
+    .style-content .text-checkbox p{
+        font-size: 1.5rem;
+    }
+    .style-content .checkbox:checked + .text-checkbox{
+        height: 11rem;
+    }
 }

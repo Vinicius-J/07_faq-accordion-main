@@ -1,12 +1,12 @@
 <!-- MODELO PROJETO EM ANDAMENTO -->
-<h1 align="center"> 
+<!-- <h1 align="center"> 
 	🚧 07_faq-accordion-main - Em contrução 🚧
-</h1>
+</h1> -->
 
   <!-- MODELO PROJETO FINALIZADO -->
-<!-- <h1 align="center"> 
+<h1 align="center"> 
 	  🚀✅ 07_faq-accordion-main - Concluído ✅🚀
-</h1> -->
+</h1>
 
 <!-- ---------------------------------------------------------------------- -->
 
